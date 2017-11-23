@@ -1,7 +1,4 @@
-
-
-
-
+/*CSS style code for the memory game*/
 
 .btn {
       background: #3498db;
@@ -21,13 +18,11 @@
       text-decoration: none;
     }
 
-        .gameTile {
-      display: inline-block;
-      border: 1px solid black;
+    .flipImage {
+      width: 100px;
     }
 
-    .flipImage{
-
-    	width: 100px;
-    	
+    .gameTile {
+      display: inline-block;
+      border: 1px solid black;
     }
