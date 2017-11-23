@@ -5,6 +5,7 @@ let tileArray =[];
 let startButton = document.getElementById("start");
 let gamePlay = false;
 let gameBoard = document.getElementById("gameboard");
+let cardFlipped = -1;
 
 //event listens
 
@@ -61,3 +62,29 @@ function shuffleArray(array){
       }
       gameBoard.innerHTML = html;
     }
+
+
+  // function to be able to pick up a card
+  
+    function pickCard(tileIndex, t) {
+      console.log(tileIndex);
+      console.log(cardFlipped);
+      console.log(t.src);
+      // check if its already flipped
+      if (cardFlipped >= 0) {
+        //second cardFlipped
+        if (tileIndex != cardFlipped) {
+          // second card new
+          t.src = "images/" + tileArray[tileIndex];
+          var secondCard = tileIndex;
+          // check for match
+
+        }
+        console.log('second', cardFlipped);
+      } else {
+        //first cardFlipped
+        cardFlipped = tileIndex;
+        t.src = "images/" + tileArray[tileIndex];
+        console.log('first', cardFlipped);
+      }
+    } 
