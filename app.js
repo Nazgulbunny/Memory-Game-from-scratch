@@ -4,7 +4,7 @@ let tileImage = [];
 let tileArray =[];
 let startButton = document.getElementById("start");
 let gamePlay = false;
-let board = document.getElementById("gameboard");
+let gameBoard = document.getElementById("gameboard");
 
 //event listens
 
@@ -27,7 +27,7 @@ if (!gamePlay) {
 	buildArray();
 	tileArray=tileImage.concat(tileImage);
 	shuffleArray(tileArray);
-	console.log(tileArray);
+	buildBoard()
 }
 
 
@@ -53,12 +53,11 @@ function shuffleArray(array){
 }
 
 //function to build the board
-
     function buildBoard() {
       var html = "";
-      for (var i = 0; i <= (tileArray.length - 1); i++) {
+      for (var x = 0; x <= (tileArray.length - 1); x++) {
         html += '<div class="gameTile"><div class="gameTile">';
-        html += '<img id="cardz' + i + '" src="images/back.jpg" onclick="pickCard(' + i + ',this)" class="flipImage"></div></div>';
+        html += '<img id="cardz' + x + '" src="images/back.png" onclick="pickCard(' + x + ',this)" class="flipImage"></div></div>';
       }
-      board.innerHTML = html;
+      gameBoard.innerHTML = html;
     }

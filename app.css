@@ -20,3 +20,14 @@
       background: #3cb0fd;
       text-decoration: none;
     }
+
+        .gameTile {
+      display: inline-block;
+      border: 1px solid black;
+    }
+
+    .flipImage{
+
+    	width: 100px;
+    	
+    }
